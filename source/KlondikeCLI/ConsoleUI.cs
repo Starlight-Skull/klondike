@@ -3,6 +3,7 @@ using Globals.Enums;
 using Globals.Interfaces;
 using System;
 using System.Collections.Generic;
+using System.Text;
 
 namespace KlondikeCLI
 {
@@ -33,6 +34,7 @@ namespace KlondikeCLI
         {
             _logic = logic;
             Console.Title = "Klondike";
+            Console.OutputEncoding = Encoding.GetEncoding("utf-8");
         }
 
         public void Run()
@@ -114,8 +116,7 @@ namespace KlondikeCLI
                     Command.restart => (_) => ReInit(_logic.New),
                     Command.load => (s) => ReInit(() => _logic.LoadFile(RequireArgCount(s, 1)[1])),
                     Command.autosolve => (_) => _logic.AutoSolve(),
-                    _ => (_) => { }
-                    ,
+                    _ => (_) => { },
                 };
             }
             catch { throw new ArgumentException("Unknown command. Try typing \"help\" for a list of commands."); }
