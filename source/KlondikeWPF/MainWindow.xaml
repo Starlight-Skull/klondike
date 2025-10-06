@@ -1,0 +1,30 @@
+﻿<Window x:Class="KlondikeWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KlondikeWPF"
+        mc:Ignorable="d"
+        Title="Klondike" Height="800" Width="1200">
+    <Grid Margin="0,0,0,2">
+        <ListBox x:Name="Pile1Box" HorizontalAlignment="Left" Margin="10,0,0,10" Width="150" d:ItemsSource="{d:SampleData ItemCount=5}" MouseDoubleClick="Pile1Box_MouseDoubleClick" SelectionChanged="Pile1Box_SelectionChanged" Height="423" VerticalAlignment="Bottom"/>
+        <ListBox x:Name="Pile2Box" HorizontalAlignment="Left" Margin="165,0,0,10" Width="150" d:ItemsSource="{d:SampleData ItemCount=5}" MouseDoubleClick="Pile2Box_MouseDoubleClick" SelectionChanged="Pile2Box_SelectionChanged" Height="423" VerticalAlignment="Bottom"/>
+        <ListBox x:Name="Pile3Box" HorizontalAlignment="Left" Margin="320,0,0,10" Width="150" d:ItemsSource="{d:SampleData ItemCount=5}" MouseDoubleClick="Pile3Box_MouseDoubleClick" SelectionChanged="Pile3Box_SelectionChanged" Height="423" VerticalAlignment="Bottom"/>
+        <ListBox x:Name="Pile4Box" HorizontalAlignment="Left" Margin="475,0,0,10" Width="150" d:ItemsSource="{d:SampleData ItemCount=5}" MouseDoubleClick="Pile4Box_MouseDoubleClick" SelectionChanged="Pile4Box_SelectionChanged" Height="423" VerticalAlignment="Bottom"/>
+        <ListBox x:Name="Pile5Box" HorizontalAlignment="Left" Margin="630,0,0,10" Width="150" d:ItemsSource="{d:SampleData ItemCount=5}" MouseDoubleClick="Pile5Box_MouseDoubleClick"  SelectionChanged="Pile5Box_SelectionChanged" Height="423" VerticalAlignment="Bottom"/>
+        <ListBox x:Name="Pile6Box" HorizontalAlignment="Left" Margin="788,0,0,10" Width="150" d:ItemsSource="{d:SampleData ItemCount=5}" MouseDoubleClick="Pile6Box_MouseDoubleClick" SelectionChanged="Pile6Box_SelectionChanged" Height="423" VerticalAlignment="Bottom"/>
+        <ListBox x:Name="Pile7Box" HorizontalAlignment="Left" Margin="943,0,0,10" Width="150" d:ItemsSource="{d:SampleData ItemCount=5}" MouseDoubleClick="Pile7Box_MouseDoubleClick" SelectionChanged="Pile7Box_SelectionChanged" Height="423" VerticalAlignment="Bottom"/>
+        <ListBox x:Name="MainDeckBox" HorizontalAlignment="Left" Margin="165,36,0,0" VerticalAlignment="Top" Width="150" Height="249" d:ItemsSource="{d:SampleData ItemCount=5}" SelectionChanged="MainDeckBox_SelectionChanged"/>
+        <ListBox x:Name="ClubsFoundationBox" Margin="0,37,475,0" VerticalAlignment="Top" Height="249" d:ItemsSource="{d:SampleData ItemCount=5}" MouseDoubleClick="ClubsFoundationBox_MouseDoubleClick" SelectionChanged="ClubsFoundationBox_SelectionChanged" Foreground="White" Background="#FF1D1D1D" HorizontalAlignment="Right" Width="150"/>
+        <ListBox x:Name="DiamondsFoundationBox" Margin="0,37,320,0" VerticalAlignment="Top" Height="249" d:ItemsSource="{d:SampleData ItemCount=5}" MouseDoubleClick="DiamondsFoundationBox_MouseDoubleClick" SelectionChanged="DiamondsFoundationBox_SelectionChanged" Background="#FFAD0000" Foreground="White" HorizontalAlignment="Right" Width="150"/>
+        <ListBox x:Name="HeartsFoundationBox" Margin="0,37,165,0" VerticalAlignment="Top" Height="249" d:ItemsSource="{d:SampleData ItemCount=5}" MouseDoubleClick="HeartsFoundationBox_MouseDoubleClick" SelectionChanged="HeartsFoundationBox_SelectionChanged" Foreground="White" Background="#FFAD0000" HorizontalAlignment="Right" Width="150"/>
+        <ListBox x:Name="SpadesFoundationBox" Margin="0,37,10,0" VerticalAlignment="Top" Height="249" d:ItemsSource="{d:SampleData ItemCount=5}" MouseDoubleClick="SpadesFoundationBox_MouseDoubleClick" SelectionChanged="SpadesFoundationBox_SelectionChanged" Background="#FF1D1D1D" Foreground="White" HorizontalAlignment="Right" Width="150"/>
+        <Button x:Name="DrawCardButton" Content="Draw Card" HorizontalAlignment="Left" Margin="10,36,0,0" VerticalAlignment="Top" Height="249" Width="150" Click="DrawCardButton_Click"/>
+        <Label Content="♣ Clubs" Margin="0,10,565,0" VerticalAlignment="Top" Foreground="#FF1D1D1D" HorizontalAlignment="Right" Width="61" FontWeight="Bold"/>
+        <Label Content="♦ Diamonds" Margin="0,10,385,0" VerticalAlignment="Top" Foreground="#FFAD0000" HorizontalAlignment="Right" Width="85" FontWeight="Bold"/>
+        <Label Content="♥ Hearts" Margin="0,10,255,0" VerticalAlignment="Top" Foreground="#FFAD0000" HorizontalAlignment="Right" Width="60" FontWeight="Bold"/>
+        <Label Content="♠ Spades" Margin="0,10,95,0" VerticalAlignment="Top" Foreground="#FF1D1D1D" HorizontalAlignment="Right" Width="65" FontWeight="Bold"/>
+        <Label x:Name="Errors" Content="Errors" HorizontalAlignment="Left" Margin="10,290,0,0" VerticalAlignment="Top" Foreground="#FFED6D00" FontWeight="Bold"/>
+        <Label x:Name="CountLabel" Content="TotalCards" HorizontalAlignment="Left" Margin="411,143,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+    </Grid>
+</Window>
